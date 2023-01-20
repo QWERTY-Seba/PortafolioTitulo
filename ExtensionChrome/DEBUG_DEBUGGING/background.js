@@ -67,10 +67,19 @@ function adjuntar_debugger(tabid){
     chrome.debugger.attach({tabId : tabid}, "1.3", () => {
         adjuntar_network_listener(tabid)       
         ventanas_attached.push(tabid)
+
+
+
+
         console.log('se ha adjuntado el listener correctamente en ', tabid)
     })    
         
-        
+    chrome.debugger.onDetach.addListener((source, reason) => {
+        if(source == ... && reason == devtools.open){
+            //esperar a que devtools se cierre para volver a adjuntar
+        }
+
+    })
     
     
 }

@@ -148,6 +148,9 @@ let regx = new class {
 		titulo = quitarAcentos(titulo)
 		let respuesta = this.Ofertasregex.exec(titulo)
 		console.log('Probando regex titulo con', titulo, respuesta)
+		//if respuesta == null, devolver el titulo convertido en unicode o algo asi
+
+
 		return respuesta != null
 	}
 }
