@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+
+    <meta charset=utf-8 />
+    <script type="text/javascript" src="algo.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div id="selector_div">
+        <div id="a">
+            <h4 id="job_id_title"></h4>
+            <p id="job_description"></p>
+            <hr>
+            <ul id="selected_list"></ul>
+            <div id="cdf">
+                <button id="btn_confirmar">Confirmar</button>
+                <button id="btn_crear_seleccion">Crear seleccion</button>
+            </div>
+            <p id="contador_regex"></p>
+        </div>
+    </div>
+
+    <div id="regex_div">
+        <input type="text" id="input_regex" />
+        <input style="width: 50px;" type="text" id="input_flags" value="gimu">
+        <input type="checkbox" id="input_limpiar" name="input_limpiar"> <label for="input_limpiar">Quitar al encontrar</label> 
+        <button id="btn_probar">
+            probar
+        </button>
+        <hr>
+        <ul id="Lista_ofertas"></ul>
+    </div>
+
+
+
+</body>
+<style>
+    .oferta-elemento {
+        min-height: 50px;
+        outline: 1px solid black;
+    }
+
+    p {
+        white-space: pre-line
+    }
+    .resultado{
+        background-color: orange;
+    }
+    h4 {
+        margin: 0px;
+        margin-block-start: 0 !important;
+        margin-block-end: 0;
+    }
+    #input_regex{
+        width: 500px;
+    }
+    #Lista_ofertas {
+        display: table;
+        border-collapse: collapse;
+    }
+
+    .table-cell {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 0.5em;
+  }
+    a{
+        text-decoration: none;
+        color: initial;
+    }
+    
+    #selector_div{
+        width: 600px;        
+    }
+    .quitada{
+        background: red;
+    }
+</style>
+
+</html>

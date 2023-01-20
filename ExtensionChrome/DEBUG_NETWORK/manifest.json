@@ -1,0 +1,10 @@
+{
+    "name": "Debugger JobS",
+    "version": "1",
+    "description": "Se realizo la programacion en bloc de notas. Aun no utilizo correctamente let var y const",
+    "manifest_version": 3,
+    "author": "Seba",
+    "devtools_page": "devtools.html",
+	"permissions":["experimental"]
+    
+}

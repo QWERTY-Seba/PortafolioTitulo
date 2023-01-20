@@ -1,0 +1,22 @@
+{
+    "name": "JobScrapper",
+    "version": "1",
+    "description": "",
+    "manifest_version": 3,
+    "author": "Seba",
+    "devtools_page": "devtools.html",
+	"content_scripts": [
+        {
+          "matches": ["https://www.linkedin.com/jobs/search/*"],
+          "js": ["content_script.js"]
+        }
+      ],
+	"permissions":["background","debugger","experimental","storage","unlimitedStorage","tabs","activeTab"],
+    "action":{
+        "default_popup": "action.html",
+        "default_title": "_"
+    },
+	"background": {
+		"service_worker": "background.js"
+	}
+}
