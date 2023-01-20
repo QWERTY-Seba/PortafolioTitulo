@@ -1,3 +1,6 @@
+chrome.runtime.sendMessage({type : "ATTACH_DEBUGGER"})
+
+
 var claseTestSeba = new class {
    
     divDescartados;
@@ -75,7 +78,7 @@ function AgregarBotonesDescarte(){
 
 
         boton.onclick = function(){
-                            window.postMessage({id_oferta : e.dataset.occludableJobId}) ;
+                            window.postMessage({type : "DESCARTAR_OFERTA",id_oferta : e.dataset.occludableJobId}) ;
                             claseTestSeba.descartarOferta(e.dataset.occludableJobId)
                         }
         e.appendChild(boton)

@@ -4,19 +4,19 @@
     "description": "",
     "manifest_version": 3,
     "author": "Seba",
-    "devtools_page": "devtools.html",
-	"content_scripts": [
+	  "content_scripts": [
         {
           "matches": ["https://www.linkedin.com/jobs/search/*"],
           "js": ["content_script.js"]
         }
       ],
-	"permissions":["background","debugger","experimental","storage","unlimitedStorage","tabs","activeTab"],
+	"permissions":["background","debugger","storage","unlimitedStorage","tabs","activeTab","scripting"],
     "action":{
         "default_popup": "action.html",
         "default_title": "_"
     },
 	"background": {
-		"service_worker": "background.js"
+		"service_worker": "background.js",
+    "type" : "module"
 	}
 }
